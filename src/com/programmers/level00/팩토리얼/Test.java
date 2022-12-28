@@ -7,20 +7,21 @@ package com.programmers.level00.팩토리얼;
 public class Test {
 
 	public static void main(String[] args) {
-		solution(3628800);
 		System.out.println(solution(3628800)); //10
 		System.out.println(solution(7)); //3
 	}
 	
     static int solution(int n) {
-        int answer = 0;
-       
-        
-        pass
-        다음에 다시풀기!
-        재귀함수
-        
-        
-        return answer;
+            int answer = 0;
+            while(true) {
+    			answer++;
+    			if(factorial(answer)>n)break;
+    		}
+            return answer-1;
+    	}
+        //재귀함수
+    	static int factorial(int num) {
+    		if(num==1)return 1;
+    		return num*factorial(num-1);
+    	}
     }
-}
